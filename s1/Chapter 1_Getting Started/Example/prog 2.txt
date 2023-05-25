@@ -1,0 +1,1325 @@
+
+#include <stdio.h>
+
+int main() {
+    int p,n;
+    float si,r;
+    p=1000;
+    n=3;
+    r=8.5;
+    si=p*n*r/100;
+    printf("%f\n",si);
+    return 0;
+}
+..........................................
+2>
+
+#include <stdio.h>
+
+int main() {
+    int p,n;
+    float si,r;
+   printf("Enter value of p,n,r");
+   scanf("%d%d%f",&p,&n,&r);
+    si=(p*n*r)/100;
+    printf("%f\n",si);
+    return 0;
+}
+
+......................................................
+
+// chapter1- prog 2
+#include <stdio.h>
+
+int main() {
+   float km,cm,m,ft,inch;
+   printf("\n Enter the distance in kilometer: ");
+   scanf("%f",&km);
+   m=km*1000;
+   cm=m*100;
+   inch=cm/2.54;
+   ft=inch/12;
+   
+   printf("Distance in meter=%f\n",m);
+    printf("Distance in meter=%f\n",cm);
+     printf("Distance in meter=%f\n",ft);
+      printf("Distance in meter=%f\n",inch);
+        
+    return 0;
+}
+
+-------------------------------------------------------
+// chapter1- prog 3
+
+#include <stdio.h>
+
+int main() {
+  int m1,m2,m3,m4,m5,aggr;
+  float per;
+  printf("\nEnter marks in 5 sunject: ");
+  scanf("%d%d%d%d%d",&m1,&m2,&m3,&m4,&m5);
+  aggr=m1+m2+m3+m4+m5;
+  per=aggr/5;
+  printf("Aggregate marks is: %d\n",aggr);
+  printf("percentage marks is:%f \n",per);
+  
+    
+    return 0;
+}
+
+----------------------------------------------------------
+// chapter1- Excesisss 1
+#include <stdio.h>
+
+int main() 
+{
+ float F;
+ printf("Enter a Faranite:\n");
+ scanf("%f" ,&F);
+  float c = (F-32)*5/9;
+ 
+  printf("%f\n",c);
+    return 0;
+}
+
+-------------------------------------------------------------
+
+// chapter1- Excesisss 2
+#include <stdio.h>
+
+int main() 
+{
+    
+ float l,B,A,Perimeter,radius_of_circle , r,c;
+ printf("Enter length & breadth\n");
+ scanf("%f%f",&l,&B);
+  A=l*B;
+  printf("%f\n",A);
+  Perimeter=2*(l+B);
+   printf("%f\n",Perimeter);
+     
+   printf("Enter a radius..\n");
+   scanf("%f",&r);
+   c=2*3.14*r*r;
+   printf("%f\n",c);
+    return 0;
+}
+
+
+@@------------------------------------------@@
+// chapter 2--problem 1
+#include <stdio.h>
+#include <math.h>
+int main() {
+  float a,b,c,sp,area;
+ 
+    printf("\nEnter sides of a traingle: ");
+    scanf("%f%f%f",&a,&b,&c);
+    sp=(a+b+c)/2;
+    area=sqrt(sp*(sp-a)*(sp-b)*(sp-c));
+    printf("Area of traingle=%f\n",area);
+
+    return 0;
+}
+--------------------------------------------
+
+// chapter 2--problem 2
+#include <stdio.h>
+#include <math.h>
+int main() {
+  int n,d5,d4,d3,d2,d1;
+  long int revnum;
+  printf("Enter a five digit number(less than 32767):");
+  scanf("%d",&n);
+  d5=n%10;
+  n=n/10;
+   d4=n%10;
+  n=n/10;
+   d3=n%10;
+  n=n/10;
+   d2=n%10;
+  n=n/10;
+   d1=n%10;
+  n=n/10;
+  revnum=d5*10000+d4*1000+d3*100+d2*10+d1;
+  printf("Reverse number %ld\n",revnum);
+    return 0;
+}
+
+-------------------------------------------
+
+
+// chapter 2--problem 3
+#include <stdio.h>
+// #include <math.h>
+int main() {
+ int amt,no100,no50,no10,no5,no2,no1,total;
+ printf("Enter the amt: ");
+ scanf("%d",&amt);
+ no100=amt/100;
+ amt=amt%100;
+ 
+ no50=amt/50;
+ amt=amt%50;
+ 
+ no10=amt/10;
+ amt=amt%10;
+ 
+ no5=amt/5;
+ amt=amt%5;
+ 
+  no2=amt/2;
+ amt=amt%2;
+ 
+  no1=amt/1;
+ amt=amt%1;
+ 
+ total=no100+no50+no10+no5+no2+no1;
+ printf("Smallest number of notes=%d\n",total);
+ 
+ 
+    return 0;
+}
+------------------------------------------------------
+
+
+// chapter 2--Execise 3
+#include <stdio.h>
+// #include <math.h>
+int main() {
+int num=12345,sum=0;
+
+while(num!=0){
+    sum=sum+num%10;
+    num=num/10;
+    
+}
+printf("%d",sum);
+    return 0;
+}
+-------------------------
+
+
+// chapter 2--Execise 2
+#include <stdio.h>
+// #include <math.h>
+int main() {
+
+float r,x,y,theta;
+
+printf("Enter a co-ordinates x &Y\n");
+scanf("%f%f",&x,&y);
+
+r=sqrt(x*x+y*y);
+theta=atan(y/x);
+ theta = theta * (180.0 / 3.14);
+
+printf("%f%f",r,theta);
+    return 0;
+}
+
+@@-------------------------------------@@
+
+
+// chapter 3--prog 1 
+#include <stdio.h>
+// #include <math.h>
+
+int main() {
+int qty,dis;
+float rate,tol;
+printf("Enter a quality and rate");
+scanf("%d%f",&qty,&rate);
+
+if(qty>1000)
+dis=10;
+else
+dis=0;
+tol=(qty*rate)-(qty*rate*dis/100);
+
+printf("Total expenses=Rs.%f\n",tol);
+    return 0;
+}
+--------------------------------------------
+
+
+// chapter 3--prog 2
+#include <stdio.h>
+// #include <math.h>
+
+int main() {
+float bs,gs,da,hra;
+printf("Enter a basic salary");
+scanf("%f",&bs);
+if(bs<1500){
+    hra=bs*10/100;
+    da=bs*90/100;
+}
+else{
+    hra=500;
+    da=bs*98/100;
+}
+gs=bs+hra+da;
+
+
+printf("Glosary salary=Rs.%f\n",gs);
+    return 0;
+}
+
+-----------------------------------------
+
+
+// chapter 3--prog 4
+#include <stdio.h>
+// #include <math.h>
+
+int main() {
+float cp,sp,p,l;
+printf("Enter cost price and selling price:");
+scanf("%f%f",&cp,&sp);
+p=sp-cp;
+l=cp-sp;
+if(p>0)
+printf("Seller profit o RS.%f\n",p);
+if(l>0)
+printf("Seller loss o RS.%f\n",l);
+if(p==0)
+printf("theit is no loss no profit\n");
+
+
+    return 0;
+}
+---------------------------------------------
+
+
+// chapter 3--prog 5
+#include <stdio.h>
+// #include <math.h>
+
+int main() {
+int n;
+printf("Enter Any Number:");
+scanf("%d",&n);
+if(n%2==0){
+    printf("even\n");
+}
+else{
+    printf("odd");
+}
+
+//printf("theit is no loss no profit\n");
+
+
+    return 0;
+}
+-------------------------------------------
+
+int // chapter 3--prog 6
+#include <stdio.h>
+// #include <math.h>
+
+int main() {
+int yr;
+printf("Enter a year:");
+scanf("%d",&yr);
+if(yr%100==0)
+
+if(yr%400==0)
+printf("Leap year\n");
+else
+
+printf("Not a Leap year");
+else
+{
+    if(yr%4==0)
+    printf("larp yr\n");
+    else
+    printf("Not a Leap year\n");
+}
+
+//printf("theit is no loss no profit\n");
+
+
+    return 0;
+}
+
+--------------------------------------------
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+//   int a=300,b,c;
+//   if(a>=400)
+//   b=300;
+//   c=200;
+//     printf("%d\n%d\n",b,c);
+
+// int x=10,y=20;
+// if(x==y);
+//  printf("%d\n%d\n",x,y);
+
+
+// int x=3;
+// float y=3.0;
+// if(x==y)
+// printf("X and Y are Equal\n");
+// else
+// printf("x and y are not euqal\n");
+
+
+// int x=3,y,z;
+// y=x=10;
+// z=x<10;
+// printf("x=%d y=%d  z=%d\n",x,y,z);
+
+
+// int i=65;
+// char j='A';
+// if(i==j)
+// printf("C is WOW\n");
+// else
+// printf("C is Headache\n");
+
+
+// float a=12.25,b=12.52;
+// if(a=b)
+// printf("A an d b is euqal");
+
+
+// int j=10,k=12;
+// if(k>=j){
+//     {
+//         k=j;
+//         j=k;
+//     }
+// }
+
+
+// int x=10;
+// if(x>=2)
+// printf("%d\n",x);
+
+
+// if('X'<'x')
+// printf("Accccc");
+
+
+// int x=10,y=15;
+// if(x%2=y%3)
+// printf("carpahiiiss\n");  //erro
+
+
+// int a,b;
+// scanf("%d%d",a,b);
+// if(a>b)
+// printf("This is a game\n");
+// else
+// printf("You have to play\n"); //2 3 Segmentation fault
+
+
+    return 0;
+}
+-----------------------------------------------------------
+
+// chapter 3--exercise--1
+#include <stdio.h>
+
+int main() {
+int num=1234,rev=0,d;
+while(num!=0){
+    d=num%10;//4
+    rev=rev*10+d;
+     num=num/10;
+}
+ printf("%d\n",rev);
+ if(num==rev){
+     printf("Equal..\n");
+ }
+ else
+  printf("Not Equal..");
+
+    return 0;
+}
+--------------------------------------------------------------
+
+// chapter 3--exercise--2
+#include <stdio.h>
+
+int main() {
+int Ram,Shyam,Ajay;
+ printf("Enter a ages of");
+ scanf("%d%d%d",&Ram,&Shyam,&Ajay);
+ if(Ram>=Shyam && Ram>=Ajay ){
+    printf("Ram is Younger\n");
+ }
+ else if(Shyam>=Ram && Shyam>=Ajay){
+      printf("Shyam is Younger\n");
+ }
+ else{
+      printf("Ajay is Younger\n");
+
+ }
+
+    return 0;
+}
+
+-------------------------------------------------------
+
+// chapter 3--exercise--3
+#include <stdio.h>
+
+int main() {
+int t1=60,t2=60,t3=60,sum;
+ sum=t1+t2+t3;
+ if(sum==180){
+     printf("Valid Traingle\n");
+ }
+ else{
+     printf("Invalid Traingle");
+ }
+ return 0;
+}
+@@@--------------------------------------------------@@@
+
+// Chapter-4 prob-1
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main() {
+int m1,m2,m3,m4,m5,per;
+printf("Enter marks in five sub:");
+scanf("%d%d%d%d%d", &m1,&m2,&m3,&m4,&m5);
+per=(m1+m2+m3+m4+m5)*100/500;
+if(per>=60)
+printf("First division\n");
+else
+{
+    if(per>=50)
+    printf("Second Division\n");
+    else
+    {
+        if(per>=40)
+         printf("Third Division\n");
+         else
+          printf("Fail\n");
+    }
+}
+    return 0;
+}
+----------------------------------------------------
+
+// Chapter-4 prob-2
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main() {
+int m1,m2,m3,m4,m5,per;
+printf("Enter marks in five sub:");
+scanf("%d%d%d%d%d", &m1,&m2,&m3,&m4,&m5);
+per=(m1+m2+m3+m4+m5)/500*100;
+if(per>=60)
+printf("First division\n");
+    if((per>=50)&&(per<60))
+    printf("Second Division\n");
+        if((per>=40)&&(per<50))
+         printf("Third Division\n");
+        if(per<40)
+          printf("Fail\n");
+    
+    return 0;
+}
+
+--------------------------------------------------
+// Chapter-4 prob-3
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main() {
+char g;
+int yos,qual,sal=0;
+printf("Enter gender, yos and qualification(0=G,=PG):");
+scanf("%c%d%d",&g,&yos,&qual);
+if(g=='m'&&yos>=10&&qual==1)
+sal=11000;
+else if((g=='m'&&yos>=10&&qual==0)||(g=='m'&&yos<10&&qual==1))
+sal=1000;
+else if((g=='m'&&yos<10&&qual==0))
+sal=7000;
+else if(g=='f'&&yos>=10&&qual==1)
+sal=12000;
+else if(g=='f'&&yos>=10&&qual==0)
+sal=9000;
+
+else if((g=='f'&&yos<10&&qual==1))
+sal=10000;
+else if((g=='f'&&yos<10&&qual==0))
+sal=6000;
+printf("\n Salary Of employee=%d\n",sal);
+
+
+    
+    return 0;
+}
+----------------------------------------------------------
+
+
+// Chapter-4 ex-5
+
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main() {
+int i;
+scanf("%d",&i);
+(i==1? printf("Amithabh"):printf("All and sunday"));
+// printf("\n Salary Of employee=%d\n",sal);
+    return 0;
+}
+-----------------------------------------------------
+
+
+// Chapter-4 ex-6
+
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main() {
+int yr;
+printf("Enter a yr:");
+scanf("%d",&yr);
+if(yr%400==0||yr%100==0&&yr%4==0)
+printf("Leap year\n");
+else
+printf("Not Leap year\n");
+
+//printf("\n Salary Of employee=%d\n",sal);
+    return 0;
+}
+----------------------------------------------------
+
+
+// Chapter-4 ex-7
+
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main() {
+char ch;
+printf("Enter a character:");
+scanf("%c",&ch);
+if(ch>=65 && ch<=90)
+printf("Upper case latter\n");
+if(ch>=97 && ch<=122)
+printf("Lower case latter\n");
+
+if(ch>=48 && ch<=57)
+printf("Character is a digit\n");
+
+if((ch>=0&&ch<48)||(ch>57&&ch<65)||(ch>90&&ch<97)||ch>122)
+
+printf("Character is a special Symbol\n");
+    return 0;
+}
+----------------------------------------------------------
+
+
+// Chapter-4 ex-8
+
+#include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
+
+int main() {
+int side1,side2,side3,largeside,sum;
+printf("Enter aTraingle:");
+scanf("%d%d%d",&side1,&side2,&side3);
+if(side1>side3)
+{
+    if(side1>side3){
+        sum=side2+side3;
+        largeside=side1;
+    }
+    else{
+        sum=side1+side2;
+        largeside=side3;
+    }
+}
+else{
+    if(side2>side3){
+        sum=side1+side3;
+        largeside=side2;
+        
+    }
+    else{
+        sum=side1+side2;
+        largeside=side3;
+    }
+}
+if(sum>largeside)
+printf("The taringle is a valid traingle\n");
+else
+printf("The taringle is a Invalid traingle\n");
+
+    return 0;
+}
+----------------------------------------------------
+
+// chapter-4 excerci..
+#include <stdio.h>
+
+int main() {
+    int i=4,z=12;
+    if(i=5||z>50)
+    
+    printf("Hello world\n");
+else
+    printf("Boss\n");
+    return 0;
+}
+----------------------------------------------------
+// chapter-4 excerci..
+#include <stdio.h>
+
+int main() {
+  int i=4,j=-1,k=0,w,x,y,z;
+  w=i||j||k;
+  x=i&&j&&k;
+  y=i||j&&k;
+  z=i&&j||k;
+    printf("w%dx%dy%dz%d\n",w,x,y,z);
+    return 0;
+}
+---------------------------------------------------------
+// chapter-4 excerci..
+#include <stdio.h>
+
+int main() {
+  int x=20,y=40,z=45;
+  if(x>y&&x<z)
+    printf("Biggest %d \n",x);
+    else if(y>x&&y>z)
+    printf("Biggest %d \n",y);
+     else if(z>x&&z>y)
+    printf("Biggest %d \n",z);
+    return 0;
+}
+---------------------------------------------------------
+
+// chapter-4 excex
+#include <stdio.h>
+
+int main() {
+   int k,num=30;
+   k=(num>5?(num<=10?100:200):500);
+    printf("%d\n",num);
+
+    return 0;  //30
+}
+@@@---------------------------------------------------@@
+//Chapter-5 prog-1
+#include <stdio.h>
+
+int main() {
+   int p,n,count;
+   float r,si;
+   count=1;
+   while(count<=3){
+         printf("\nEnter values of p,n and r");
+         scanf("%d%d%f",&p,&n,&r);
+         si=p*n*r/100;
+           printf("Simple interest=Rs.%f\n",si);
+           count=count+1;
+   }
+    // printf("Hello world");
+
+    return 0;
+}
+-----------------------------------------------------
+
+//Chapter-5 prog-3
+#include <stdio.h>
+
+int main() {
+   float a=10.0;
+   while(a<=10.5){
+       printf("Rain Drops on roses");
+       printf("...and whiskers on kittens\n");
+       a=a+0.1;
+   }
+  
+
+    return 0;
+}
+--------------------------------------------------------
+
+//Chapter-5 prog-4
+#include <stdio.h>
+
+int main() {
+  int i=1;
+   while(i<=10){
+      
+       printf("%d\n",i);
+       i=i+1;
+   }
+    return 0;
+}
+--------------------------------------------------------
+
+//Chapter-5 prog-5
+#include <stdio.h>
+
+int main() {
+  int i=1;
+   while(i<=10)
+   {
+      
+       printf("%d\n",i);
+       i++;
+   }
+    return 0;
+}
+-------------------------------------------------------
+
+//Chapter-5 prog-6
+#include <stdio.h>
+
+int main() {
+  int i=1;
+   while(i<=10)
+   {
+      
+       printf("%d\n",i);
+       i+=1;
+   }
+    return 0;
+}
+
+-------------------------------------------------------
+
+//Chapter-5 prog-7
+#include <stdio.h>
+
+int main() {
+ 
+   
+       int i=0;
+   while(i++<10)
+       printf("%d\n",i);
+       //i+=1;
+   
+    return 0;
+}
+
+--------------------------------------------------------
+
+//Chapter-5 prog-8
+#include <stdio.h>
+
+int main() {
+ 
+   
+       int i=0;
+   while(++i<=10)
+       printf("%d\n",i);
+   
+    return 0;
+}
+-----------------------------------------------------------
+//Chapter-5 prog-10
+#include <stdio.h>
+
+int main() {
+ 
+int num,i,fact;
+   printf("Enter a number:");
+        scanf("%d",&num);
+        fact=i=1;
+   while(i<=num){
+       
+     fact=fact*i;
+     i++;
+   }
+    printf("Fcatorial value of %d is=%d\n",num,fact);
+    
+      
+   
+    return 0;
+}
+
+-------------------------------------------------------
+
+//Chapter-5 prog-11
+#include <stdio.h>
+
+int main() {
+ 
+float x,power;
+int i,y;
+   printf("\nEnter a number:");
+        scanf("%f%d",&x,&y);
+       power=i=1;
+       
+   while(i<=y){
+       
+     power=power*x;
+     i++;
+   }
+    printf("%f to the power%d is %f\n",x,y,power);
+    
+      
+   
+    return 0;
+}
+------------------------------------------------------
+
+//Chapter-5 prog-12
+#include <stdio.h>
+
+int main() {
+ 
+ int x=4,y,z;
+ y=--x;
+ z=x--;
+ printf("%d\n%d\n%d\n",x,y,z);
+
+   // printf("%f to the power%d is %f\n",x,y,power);
+
+    return 0;
+}
+-------------------------------------------------------
+
+//Chapter-5 prog-13
+#include <stdio.h>
+
+int main() {
+ 
+ int x=4,y=3,z;
+ z=x-- -y;
+ printf("%d\n%d\n%d\n",x,y,z);
+
+   // printf("%f to the power%d is %f\n",x,y,power);
+
+    return 0;
+}
+--------------------------------------------------------
+
+//Chapter-5 prog-14
+#include <stdio.h>
+
+int main() {
+    
+    while('a'<'b')
+ printf("Malyalam is palindrome\n");
+    return 0; // Infinite time run
+}
+
+----------------------------------------------------------
+
+//Chapter-5 prog-15
+#include <stdio.h>
+
+int main() {
+    int i;
+    while(i=10){
+        printf("%d\n",i);
+        i=i+1;
+    }
+ 
+    return 0; // 10 will print many timesss
+}
+
+---------------------------------------------------------
+
+//Chapter-5 prog-17
+#include <stdio.h>
+
+int main() {
+    float x=1.1;
+    while(x==1.1){
+        printf("%f\n",x);
+        x=x-0.1;
+    }
+ 
+    return 0; // float value is not compared thats wise it will not print
+}
+------------------------------------------------------------------------
+
+//Chapter-5 Exercises-1
+#include <stdio.h>
+
+int main() {
+    int a  =0;
+    while(a<=225){
+        printf("%d\n",a);
+        a++;
+    }
+ 
+    return 0; 
+}
+
+----------------------------------------------------
+
+// Chapter-5 Armstrong NUmber, Excercise-2
+#include <stdio.h>
+
+int main() {
+   int num=153,count=1,sum,rem;
+   
+   while(count<=500){
+       num=count;
+       sum=0;
+       while(num){
+           rem=num%10;
+           sum=sum+(rem*rem*rem);
+           num=num/10;
+       }
+       if(count==sum){
+           printf("%d = Armstrong number\n",count);
+       }
+       else{
+           printf("%d = Not Armstrong Number\n",count);
+       }
+       count++;
+   }
+
+    return 0;
+}
+
+---------------------------------------------------------
+
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int p,n,i;
+ float r,si;
+ for(int i=10;i;i--){
+
+     printf("%d\n",i);
+ }
+    return 0;
+}
+-------------------------------------------------------
+
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int p,n,i,j;
+ for(int i<4;j=5;j=0){
+
+     printf("%d\n",i);
+ }
+    return 0;
+}
+-------------------------------------------------------
+
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int p,n,i,j;
+ for(i=1;i<=10;printf("%d",i++));
+
+//      printf("%d\n",i);
+//  }
+    return 0;
+}
+
+----------------------------------------------------
+
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int i;
+ for(i=1;i<=10;)
+{
+      printf("%d\n",i);
+      i=i+1;
+}
+    return 0;
+}
+----------------------------------------------------------
+
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int i=1;
+ for(;i<=10;i=i+1)
+
+      printf("%d\n",i);
+
+    return 0;
+}
+
+---------------------------------------------------------
+
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int i=1;
+ for(;i<=10;)
+{
+      printf("%d\n",i);
+i=i+1;
+}
+    return 0;
+}
+
+--------------------------------------------------------
+
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int i;
+ for(i=0;i++<10;)
+
+      printf("%d\n",i);
+//i=i+1;
+
+    return 0;
+}
+
+--------------------------------------------------------
+// Chapter-6 prog-2
+#include <stdio.h>
+
+int main() {
+ int i;
+ for(i=0;++i<=10;)
+
+      printf("%d\n",i);
+//i=i+1;
+
+    return 0;
+}
+
+---------------------------------------------------------
+
+// Chapter-6 Nested for loop
+#include <stdio.h>
+
+int main() {
+ int r,c,sum;
+ for(r=1;r<=3;r++){
+     for(c=1;c<=2;c++){
+         sum=r+c;
+         printf("r=%d c=%d sum=%d\n",r,c,sum);
+     }
+ }
+    return 0;
+}
+
+----------------------------------------------------------
+// Chapter-6 
+#include <stdio.h>
+
+int main() {
+int num,i;
+printf("Enter a number");
+scanf("%d",&num);
+i=2;
+while(i<=num-1){
+    if(num%i==0){
+        printf("Not a prime number\n");
+        break;
+    }
+    i++;
+}
+if(i==num)
+printf("Prime number");
+ 
+    return 0;
+}
+
+----------------------------------------------------------
+
+// Chapter-6  continue 
+#include <stdio.h>
+
+int main() {
+ int i,j;
+ for(i=1;i<=2;i++){
+     for(j=1;j<=2;j++){
+         if(i==j)
+         {
+             continue; 
+         }
+        
+         printf("%d%d\n",i,j);
+     }
+ }
+    return 0;
+}
+
+---------------------------------------------------------
+// Chapter-6  
+#include <stdio.h>
+
+int main() {
+char another;
+int num;
+do{
+    printf("Enter a number");
+    scanf("%d",&num);
+     printf("square of%d is %d\n",num,num*num);
+    printf("want to enter no y/n");
+    fflush(stdin);
+    scanf("%c",&another);
+   
+   
+}
+while(another=='y');
+    return 0;
+}
+
+--------------------------------------------------------
+
+// Chapter-6  prog-1
+#include <stdio.h>
+
+int main() {
+
+int i,n=1;
+printf("\n PRIME numbers between 1 and 300 are:\n1\t");
+for(n=2;n<300;n++)
+{
+    int i=2;
+    for(i=2;i<n;i++)
+    {
+    if(n%i==0)
+    break;
+}
+if(i==n)
+printf("%d\t",n);
+}
+    return 0;
+}
+
+---------------------------------------------------------
+
+// Chapter-6  prog-2
+#include <stdio.h>
+
+int main() {
+
+int i=1,j;
+float fact,sum=0.0;
+for(i=1;i<=7;i++)
+{
+    fact=1.0;
+    for(j=1;j<=i;j++)
+    fact=fact*j;
+    sum=sum+i/fact;
+}
+printf("Sum of series=%f\n",sum);
+
+    return 0;
+}
+
+----------------------------------------------------------
+
+// Chapter-6  prog-2
+#include <stdio.h>
+
+int main() {
+int i=1,j=1,k=1;
+for(i=1;i<=3;i++){
+    for(j=1;j<=3;j++){
+        for(k=1;k<=3;k++)
+        printf("%d%d%d\n",i,j,k);
+    }
+}
+
+
+    return 0;
+}
+
+---------------------------------------------------------
+
+// Chapter-6 Exercises-1
+#include <stdio.h>
+
+int main() {
+    int n,temp;
+    printf("Enter a multiplication:");
+    scanf("%d",&n);
+for(int i=1;i<=10;i++){
+    printf("%d * %d = %d\n", n, i, n * i);
+}
+    return 0;
+}
+
+-------------------------------------------------------
+
+// Chapter-7 prob-1
+#include <stdio.h>
+
+int main() {
+    int i=2;
+    switch(i){
+        case 1:
+        printf("I am in case1\n");
+         case 2:
+        printf("I am in case2\n");
+         case 3:
+        printf("I am in case3\n");
+        default:
+          printf("I am in Default\n");
+}
+    return 0;
+}
+
+----------------------------------------------------------
+
+
+// Chapter-7 prob-1
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Enter any one of the alphabets a,b or c");
+    scanf("%c",&ch);
+    
+    switch(ch){
+        case 'a':
+        case 'A' :
+        printf("a is an Apple\n");
+        break;
+        case 'b':
+         case 'B':
+        printf("B is ball\n");
+        break;
+         case 'c':
+         case 'C':
+        printf("I am in case3\n");
+        default:
+          printf("I am in Default\n");
+}
+    return 0;
+}
+
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
